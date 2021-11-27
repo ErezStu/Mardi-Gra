@@ -1,0 +1,138 @@
+/* Head picture */
+.headPic {
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  height: 400px;
+  width: 100%;
+  margin: 0 auto;
+
+  /* Text of the head picture*/
+  p {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #f2cc0f;
+  }
+}
+
+.about {
+  display: flex;
+
+  /* Left side of the about */
+  .aboutL {
+    animation: AL 3s;
+    width: 50%;
+    margin: auto 0;
+
+    /* Head pictures */
+    img {
+      height: 160px;
+      display: block;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    /* headlines */
+    h4 {
+      font-size: 30px;
+      text-align: center;
+      color: #9453a6;
+      font-family: "Henny Penny", sans-serif;
+    }
+
+    /* Text */
+    p {
+      text-align: justify;
+      font-family: "Roboto", sans-serif;
+      padding: 20px;
+      font-weight: bolder;
+    }
+  }
+
+  /* Right side of the about */
+  .aboutR {
+    animation: AR 3s;
+    width: 50%;
+    margin: auto 0;
+
+    /* Head pictures */
+    img {
+      height: 160px;
+      display: block;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    /* headlines */
+    h4 {
+      font-size: 30px;
+      text-align: center;
+      color: #9453a6;
+      font-family: "Henny Penny", sans-serif;
+    }
+
+    /* Text */
+    p {
+      text-align: justify;
+      font-family: "Roboto", sans-serif;
+      padding: 20px;
+      font-weight: bolder;
+    }
+  }
+}
+
+@keyframes AL {
+  from {
+    opacity: 0;
+    transform: translatex(-400px);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+@keyframes AR {
+  from {
+    opacity: 0;
+    transform: translatex(400px);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+@media (max-width: 880px) {
+  .about {
+    display: block;
+
+    /* Left side of the about */
+    .aboutL {
+      width: 100%;
+
+      /* Head pictures */
+      img {
+        height: 100px;
+      }
+
+      /* Text */
+      p {
+        padding: 10px;
+      }
+    }
+
+    /* Right side of the about */
+    .aboutR {
+      width: 100%;
+
+      /* Head pictures */
+      img {
+        height: 100px;
+      }
+      /* Text */
+      p {
+        padding: 10px;
+      }
+    }
+  }
+}

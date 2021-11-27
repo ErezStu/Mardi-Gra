@@ -1,0 +1,111 @@
+/* Gallery picture */
+.GP {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+
+  /* Each column */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+
+  /* Each picture */
+  .column img {
+    vertical-align: middle;
+    width: 100%;
+    border: rgb(53, 119, 119) 5px solid;
+    cursor: pointer;
+    transition: transform 0.5s, opacity 400ms;
+  }
+
+  /* Each picture hover */
+  .column img:hover {
+    border: aqua 5px solid;
+    transform: scale(1.25);
+  }
+
+  /* Text over picture */
+  .Description {
+    text-align: center;
+    font-size: 1.5em;
+    color: #0d0d0d;
+    background-color: rgba(255, 192, 203, 0.7);
+    border: 2px solid #8cb;
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  /* Text over picture hover */
+  .column div:hover .Description {
+    visibility: visible;
+    transform: rotate(1turn) translateY(-40px);
+    opacity: 1;
+  }
+}
+
+/* Gallery video */
+.GV {
+  display: flex;
+}
+
+/* Each video */
+iframe {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  height: 400px;
+  width: 500px;
+}
+
+@media screen and (max-width: 800px) {
+  /* Galery picture each column */
+  .GP .column {
+    flex: 50%;
+    max-width: 100%;
+  }
+
+  /* Each picture hover */
+  .GP .column img:hover {
+    border: black 2px solid;
+    transform: none;
+  }
+
+  /* Text over picture hover */
+  .GP .column div:hover .Description {
+    transform: none;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /* Galery picture each column */
+  .GP .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  /* Each picture hover */
+  .GP .column img:hover {
+    border: black 2px solid;
+    transform: none;
+  }
+
+  /* Text over picture hover */
+  .GP .column div:hover .Description {
+    transform: none;
+    display: none;
+  }
+
+  /* Gallery video */
+  .GV {
+    display: block;
+
+    /* Each video */
+    iframe {
+      max-width: 100%;
+    }
+  }
+}

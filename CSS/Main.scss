@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap");
+@import "HeaderNavbar";
+@import "HeadPic";
+@import "Footer";
+@import "About";
+@import "Media";
+@import "FAQ";
+@import "Contact";
+@import "Trivia";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e9dfdf;
+  animation: Index 2s;
+}
+
+@keyframes Index {
+  from {
+    opacity: 0;
+    transform: translatey(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+/* The Head picture for mobile */
+.HP {
+  display: none;
+}
+
+.carousel-inner {
+  /* Images of the slider */
+  img {
+    border: 2px solid #f2cc0f;
+    max-height: 80vh;
+    margin: auto auto;
+    border-radius: 50px;
+  }
+
+  /* Text of the slider */
+  p {
+    text-align: center;
+    font-size: 4em;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    font-family: "Henny Penny", "sans-serif";
+    font-weight: bolder;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Headline of the sponsers */
+h1 {
+  text-align: center;
+  display: block;
+  color: #8cbf3f;
+  font-size: 4em;
+  text-decoration: underline;
+  font-family: "Pattaya", sans-serif;
+}
+
+/* The divs of the sponsers  */
+div[class$="col-sm"] {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin: 30px;
+
+  a {
+    text-decoration: none;
+  }
+
+  /* The headlines of the sponsers */
+  h2 {
+    font-family: "Henny Penny", sans-serif;
+    text-align: center;
+    color: #0d0d0d;
+    line-height: 25px;
+    font-size: 2.5em;
+  }
+
+  /* The sponsers  */
+  #ace,
+  #death,
+  #Bistreaux,
+  #P402,
+  #sheraton,
+  #Haunted,
+  #ritz,
+  #child {
+    transition: all 1.5s ease-in-out;
+    border-radius: 30px;
+    color: #0d0d0d;
+    font-weight: bolder;
+    box-shadow: 2px 2px 10px grey;
+    height: 400px;
+    font-family: "Roboto", sans-serif;
+  }
+
+  #ace {
+    background: url("../Pictures/Ace.jpg");
+  }
+  #death {
+    background-image: url("../Pictures/DeathMuseum.jpg");
+  }
+  #Bistreaux {
+    background-image: url("../Pictures/Bistreaux.jpg");
+  }
+  #P402 {
+    background-image: url("../Pictures/P402.jpg");
+  }
+  #sheraton {
+    background-image: url("../Pictures/Sheraton.jpg");
+  }
+  #Haunted {
+    background-image: url("../Pictures/Haunted.jpg");
+  }
+  #ritz {
+    background-image: url("../Pictures/Ritz.jpg");
+  }
+  #child {
+    background-image: url("../Pictures/Child.jpg");
+  }
+
+  /* More info button */
+  .info {
+    position: relative;
+    background-color: #f2cc0f;
+    color: #0d0d0d;
+    border-radius: 50px;
+    width: 100px;
+    font-weight: bolder;
+    text-align: center;
+    transition: all 1s ease-in-out;
+    margin: -30px auto;
+    opacity: 0;
+    bottom: 40px;
+  }
+
+  /* The texts of the sponsers */
+  p {
+    position: relative;
+    height: 10px;
+    font-size: 18px;
+    color: #0d0d0d;
+    font-weight: bolder;
+    text-align: center;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    bottom: 380px;
+  }
+}
+
+/* Sponsers hover */
+div[class$="col-sm"]:hover section {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* More info button hover */
+div[class$="col-sm"]:hover .info {
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 1px 1px grey;
+}
+
+/* The texts of the sponsers hover */
+div[class$="col-sm"]:hover p {
+  opacity: 1;
+  cursor: pointer;
+}
+
+@keyframes two {
+  from {
+    transform: rotateY(70deg);
+  }
+  to {
+    transform: rotateY(0);
+  }
+}
+
+/* Top button */
+#myBtn {
+  display: none;
+  width: 55px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  font-size: 20px;
+  height: 56px;
+  border: none;
+  outline: none;
+  background-color: #0d0d0d;
+  color: #f3f3f3;
+  cursor: pointer;
+  padding: 15px;
+}
+
+/* Top button hover */
+#myBtn:hover {
+  background-color: rgba(151, 144, 144, 0.829);
+  color: rgb(211, 75, 75);
+}
+
+@media (max-width: 400px) {
+  /* Sponsers rows */
+  .row {
+    width: 100%;
+
+    div[class$="col-sm"] {
+      /* The headlines of the sponsers */
+      h2 {
+        font-size: 2em;
+      }
+
+      /* The sponsers  */
+      #ace,
+      #death,
+      #Bistreaux,
+      #P402,
+      #sheraton,
+      #Haunted,
+      #ritz,
+      #child {
+        opacity: 0.5;
+      }
+
+      /* The texts of the sponsers */
+      p {
+        opacity: 1;
+        font-size: 20px;
+      }
+
+      /* More info button */
+      .info {
+        opacity: 1;
+      }
+    }
+  }
+
+  /* The slider */
+  .carousel-inner {
+    display: none;
+  }
+
+  /* The head picture */
+  .HP {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .row {
+    width: 100%;
+
+    div[class$="col-sm"] {
+      /* The headlines of the sponsers */
+      h2 {
+        font-size: 2em;
+      }
+
+      /* The sponsers  */
+      #ace,
+      #death,
+      #Bistreaux,
+      #P402,
+      #sheraton,
+      #Haunted,
+      #ritz,
+      #child {
+        opacity: 0.5;
+      }
+
+      /* The texts of the sponsers */
+      p {
+        opacity: 1;
+        font-size: 15px;
+      }
+
+      /* More info button hover */
+      .info {
+        opacity: 1;
+      }
+    }
+  }
+
+  /* The slider */
+  .carousel-inner {
+    display: none;
+  }
+
+  /* The head picture */
+  .HP {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1600px) {
+  /* Weather widget */
+  .widget {
+    width: 100%;
+    visibility: hidden;
+  }
+}

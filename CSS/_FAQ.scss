@@ -1,0 +1,185 @@
+html {
+  overflow-y: scroll;
+}
+
+/* Content page include the side pictures*/
+.ff {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Left and right picture */
+.LPIC,
+.RPIC {
+  width: 400px;
+  height: 400px;
+  margin: auto auto;
+  border-radius: 50%;
+}
+
+/* Right picture */
+.RPIC {
+  order: 1;
+}
+
+/* Left picture */
+.LPIC {
+  order: 3;
+}
+
+/* The box of the FAQ */
+
+#FAQ {
+  order: 2;
+  font-family: sans-serif;
+  color: #0d0d0d;
+  width: 450px;
+  margin: 90px auto;
+  padding: 30px;
+  background: #fefffa;
+  box-shadow: 7px 7px 7px 0 orange inset;
+  font-weight: bolder;
+
+  /* The headings of the FAQ */
+  h1,
+  h2 {
+    letter-spacing: 2px;
+  }
+  h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  /* Rows of the FAQ */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul li {
+    position: relative;
+    padding-bottom: 4px;
+    padding-top: 18px;
+    border-top: 1px solid #dce7eb;
+  }
+
+  ul li input[type="checkbox"] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+  }
+  ul li i {
+    position: absolute;
+    transform: translate(-6px, 0);
+    margin-top: 16px;
+    right: 0;
+  }
+  ul li input[type="checkbox"]:checked ~ p {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  ul li input[type="checkbox"]:checked ~ i::before {
+    transform: translate(2px, 0) rotate(45deg);
+  }
+  ul li input[type="checkbox"]:checked ~ i::after {
+    transform: translate(-2px, 0) rotate(-45deg);
+  }
+  ul li i::before,
+  ul li i::after {
+    content: "";
+    position: absolute;
+    background: #333;
+    width: 3px;
+    height: 9px;
+  }
+  ul li i::before {
+    transform: translate(-2px, 0) rotate(45deg);
+  }
+  ul li i:after {
+    transform: translate(2px, 0) rotate(-45deg);
+  }
+
+  /* Text of the answers */
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0 11px;
+    max-height: 800px;
+    margin-top: 14px;
+    opacity: 1;
+    transform: translate(0, 0);
+    overflow: hidden;
+  }
+  .transition,
+  p,
+  ul li i:before,
+  ul li i:after {
+    transition: all 0.25s ease-in-out;
+  }
+  .flipIn,
+  h7,
+  ul li {
+    animation: flipdown 0.5s ease both;
+  }
+  ul li:nth-of-type(1) {
+    animation-delay: 0.5s;
+  }
+  ul li:nth-of-type(2) {
+    animation-delay: 0.75s;
+  }
+  ul li:nth-of-type(3) {
+    animation-delay: 1s;
+  }
+  ul li:last-of-type {
+    padding-bottom: 0;
+  }
+
+  @keyframes flipdown {
+    0% {
+      opacity: 0;
+      transform-origin: top center;
+      transform: rotateX(-90deg);
+    }
+    5% {
+      opacity: 1;
+    }
+    80% {
+      transform: rotateX(8deg);
+    }
+    83% {
+      transform: rotateX(6deg);
+    }
+    92% {
+      transform: rotateX(-3deg);
+    }
+    100% {
+      transform-origin: top center;
+      transform: rotateX(0deg);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  /* Right picture */
+  .LPIC {
+    display: none;
+  }
+
+  /* Left picture */
+  .RPIC {
+    display: none;
+  }
+}

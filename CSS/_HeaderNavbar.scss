@@ -1,0 +1,59 @@
+/* Mardi Gras logo */
+.navbar-brand {
+  display: block;
+  text-align: center;
+}
+
+/* Buttons pages */
+.nav-link {
+  font-size: 2.5em;
+  margin-right: 30px;
+  font-family: "Pattaya", "Henny Penny";
+  border-radius: 60px;
+}
+
+/* Buttons pages hover */
+.nav-link:hover {
+  background-color: #ffcd00;
+  box-shadow: 2px 2px;
+}
+
+/* Buttons pages active */
+.nav-link:active {
+  box-shadow: 1px 1px;
+}
+
+@media (max-width: 800px) {
+  /* Buttons pages hover */
+  .nav-link:hover {
+    background-color: none;
+    box-shadow: none;
+  }
+
+  /* Buttons pages active */
+  .nav-link:active {
+    box-shadow: none;
+  }
+
+  /* Buttons pages */
+  .nav-link {
+    font-size: 2em;
+  }
+}
+@media (max-width: 400px) {
+  /* Buttons pages */
+  .nav-link {
+    font-size: 1.5em;
+  }
+
+  /* Buttons pages hover */
+  .nav-link:hover {
+    background-color: none;
+    box-shadow: none;
+  }
+
+  /* Buttons pages active */
+  .nav-link:active {
+    box-shadow: none;
+  }
+}
